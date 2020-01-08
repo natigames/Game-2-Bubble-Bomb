@@ -12,9 +12,6 @@ public class Barrel : MonoBehaviour
     // get Particle Effect for Breaking Block
     [SerializeField] GameObject blockSparkVFX;
 
-    // track number of hits
-    [SerializeField] int maxHits;
-
     //state vars (to view current state/debug)
     [SerializeField] int timesHit;
 
@@ -63,6 +60,9 @@ public class Barrel : MonoBehaviour
         //you got me, increase count 
         timesHit++;
 
+        //initialize maxhits as sprite array size
+        int maxHits = hitSprites.Length + 1;
+
         if (timesHit >= maxHits)
         {
             DestroyBlock();
@@ -78,7 +78,17 @@ public class Barrel : MonoBehaviour
     {
         // get the nexxt image from array 
         int spriteIndex = timesHit - 1;
-        GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+
+        // Only change image when sprite image exists
+        if(hitSprites[spriteIndex] != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        }
+        else
+        {
+            // log to console so that level designer can fix
+            Debug.Log("Missing hit sprite for barrel: " + gameObject.name);
+        }
     }
 
     private void DestroyBlock()

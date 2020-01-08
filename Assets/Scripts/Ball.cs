@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -15,6 +13,9 @@ public class Ball : MonoBehaviour
 
     // Default Audio Clip Array
     [SerializeField] AudioClip[] ballSounds;
+
+    // Randomness to Prevent Boring Loops (linear collisions)
+    [SerializeField] float randomFactor = 0.2f;
 
     //Define a variable to hold the distance;
     Vector2 paddleToBallVector;
@@ -71,6 +72,12 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        // Define Randomnness to Prevent Infinite Loops
+        Vector2 velocityTweak = new Vector2
+            (Random.Range(0f, randomFactor),
+             Random.Range(0f, randomFactor));
+
         // look at audio source component to play
         if (hasStarted)
         {
@@ -78,6 +85,9 @@ public class Ball : MonoBehaviour
             AudioClip clip = ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)];
             // play one shot to avoid audio cut-off
             myAudioSource.PlayOneShot(clip);
+
+            // Add velocity randomness
+            myRigidBody.velocity += velocityTweak;
         }
     }
 }
