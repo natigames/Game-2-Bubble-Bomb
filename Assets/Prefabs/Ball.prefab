@@ -99,7 +99,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8eb8dabafb8814d58ae544de917cc848, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -113,7 +113,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 612647509954681737}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8eb8dabafb8814d58ae544de917cc848, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b386c0e73c84a8dac1d8317935dba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddle1: {fileID: 0}
+  paddle1: {fileID: 4926712485790024603, guid: 855664b66ba42444f8bb67ad0c48cd87, type: 3}
   xPush: 2
   yPush: 8
   ballSounds:
@@ -143,6 +143,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8e71b94a34be49c43b93c77eba4ea4ab, type: 3}
   - {fileID: 8300000, guid: 074db827d12b86e48a5874a8de43a841, type: 3}
   - {fileID: 8300000, guid: 01ea7f0a5f839964ba0dda9c0d5ec564, type: 3}
+  randomFactor: 2
 --- !u!82 &252006046
 AudioSource:
   m_ObjectHideFlags: 0
