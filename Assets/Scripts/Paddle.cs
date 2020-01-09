@@ -12,7 +12,6 @@ public class Paddle : MonoBehaviour
     [SerializeField] float minX = 1f;
     [SerializeField] float maxX = 21f;
 
-
     // get Particle Effect for Breaking Block
     [SerializeField] GameObject paddleSparkVFX;
 
@@ -33,10 +32,25 @@ public class Paddle : MonoBehaviour
         Vector2 paddlePos = new Vector2(mousePosInUnits, transform.position.y);
 
         // Make sure the paddle doesn't go offscreen
-        paddlePos.x = Mathf.Clamp(mousePosInUnits, minX, maxX);
+        //paddlePos.x = Mathf.Clamp(mousePosInUnits, minX, maxX);
+        //updated for AutoPlay:
+        paddlePos.x = Mathf.Clamp(GetXPos(), minX, maxX);
 
         //Now move he paddle
         transform.position = paddlePos;
+    }
+
+    // Used for autoplay (locate X coord or mouse pos)
+    private float GetXPos()
+    {
+        if (FindObjectOfType<GameSession>().IsAutoPlayEnabled())
+        {
+            return FindObjectOfType<Ball>().transform.position.x;
+        }
+        else
+        {
+            return Input.mousePosition.x / Screen.width * screenWidthInUnits;
+        }
     }
 
 

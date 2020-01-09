@@ -13,6 +13,8 @@ public class GameSession : MonoBehaviour
     [SerializeField] int pointsPerBlockDestroyed = 25;
     [SerializeField] int pointsPerPaddleHit = 1;
 
+    // Hold Var to Test Autoplay
+    [SerializeField] bool isAutoPlayEnabled;
 
     // This is how you bind it to the field
     [SerializeField] TextMeshProUGUI scoreText;
@@ -69,4 +71,9 @@ public class GameSession : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // return true/false if enabled (note "I" for method and "i" for var)
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
+    }
 }
