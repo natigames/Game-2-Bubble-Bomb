@@ -1598,6 +1598,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4926712485790024603, guid: 855664b66ba42444f8bb67ad0c48cd87,
+        type: 3}
+      propertyPath: paddleSparkVFX
+      value: 
+      objectReference: {fileID: 151244, guid: 8368975de5593844bbfaf74e342fb326, type: 3}
     - target: {fileID: 5294385934728513264, guid: 855664b66ba42444f8bb67ad0c48cd87,
         type: 3}
       propertyPath: m_Name
@@ -1947,7 +1952,7 @@ PrefabInstance:
     - target: {fileID: 6870447347733419749, guid: 29658c49488664ec19f5383075b72aec,
         type: 3}
       propertyPath: isAutoPlayEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6870447347733419750, guid: 29658c49488664ec19f5383075b72aec,
         type: 3}

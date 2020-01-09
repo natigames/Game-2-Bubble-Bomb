@@ -96,8 +96,7 @@ MonoBehaviour:
   screenWidthInUnits: 22
   minX: 1
   maxX: 21
-  paddleSparkVFX: {fileID: 4166868215113348802, guid: 185add0f3b9d34681b040d24b45a7f0d,
-    type: 3}
+  paddleSparkVFX: {fileID: 151244, guid: 8368975de5593844bbfaf74e342fb326, type: 3}
 --- !u!60 &60537067135942098
 PolygonCollider2D:
   m_ObjectHideFlags: 0

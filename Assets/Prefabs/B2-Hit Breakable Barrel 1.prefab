@@ -109,9 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2cb67dcf6584e328453849356ee398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakSound: {fileID: 8300000, guid: ba57f86cd2cb9a84ebdf605f16503174, type: 3}
-  blockSparkVFX: {fileID: 157776, guid: 82bf03917e16d3d4cad30518cca28308, type: 3}
-  maxHits: 2
+  breakSound: {fileID: 8300000, guid: 0a6934ae074eb4ca09e8a827132bb34e, type: 3}
+  blockSparkVFX: {fileID: 195900, guid: ec61825cb06be72419bb09eee03af08c, type: 3}
   timesHit: 0
   hitSprites:
   - {fileID: 21300000, guid: 9bb7142ca692b48c2a3d4453826e6802, type: 3}
